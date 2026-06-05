@@ -94,10 +94,12 @@ class _TableRestoFormState extends State<TableRestoForm> {
                     ),
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
-                        var tableRestoParam = TableRestoParam(
-                          code: tecCode.text,
-                          name: tecName.text,
-                          capacity: int.parse(tecCapacity.text.toString()),
+                        final tableRestoParam = TableRestoParam(
+                          tecCode.text,
+                          tecName.text,
+                          int.parse(tecCapacity.text.toString()),
+                          null,
+                          null,
                         );
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text('Data berhasil disimpan...')),
