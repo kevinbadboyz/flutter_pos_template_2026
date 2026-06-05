@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pos_template_2026/data/models/table_resto_model.dart';
+import 'package:flutter_pos_template_2026/pages/table_resto_form.dart';
+import 'package:iconsax/iconsax.dart';
 
 class TableRestoPage extends StatefulWidget {
   const TableRestoPage({super.key});
@@ -48,6 +50,15 @@ class _TableRestoPageState extends State<TableRestoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Table Resto')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => TableRestoForm()),
+          );
+        },
+        child: Icon(Iconsax.add),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
@@ -58,7 +69,7 @@ class _TableRestoPageState extends State<TableRestoPage> {
           ),
           itemBuilder: (_, index) {
             return GestureDetector(
-              onTap: (){
+              onTap: () {
                 debugPrint('Tap ${listTableResto[index].name}');
               },
               child: Container(
