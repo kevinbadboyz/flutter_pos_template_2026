@@ -13,6 +13,8 @@ class _TableRestoFormState extends State<TableRestoForm> {
   final tecName = TextEditingController();
   final tecCapacity = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  final listTableStatus = ['Kosong', 'Terisi'];
+  final listStatus = ['Aktif', 'Non-Aktif'];
 
   @override
   void initState() {
@@ -81,6 +83,38 @@ class _TableRestoFormState extends State<TableRestoForm> {
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                   ),
+                ),
+                DropdownButtonFormField<String>(
+                  decoration: InputDecoration(
+                    labelText: 'Status Meja',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(15))
+                    )
+                  ),
+                  initialValue: listTableStatus[0],
+                  items: listTableStatus
+                      .map(
+                        (String element) =>
+                            DropdownMenuItem<String>(value: element,child: Text(element),),
+                      )
+                      .toList(),
+                  onChanged: (String? newValue) {},
+                ),
+                DropdownButtonFormField<String>(
+                  decoration: InputDecoration(
+                      labelText: 'Status',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15))
+                      )
+                  ),
+                  initialValue: listStatus[0],
+                  items: listStatus
+                      .map(
+                        (String element) =>
+                        DropdownMenuItem<String>(value: element,child: Text(element),),
+                  )
+                      .toList(),
+                  onChanged: (String? newValue) {},
                 ),
                 Container(
                   width: double.infinity,
