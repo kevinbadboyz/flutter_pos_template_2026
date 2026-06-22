@@ -10,6 +10,12 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('Profile'),),);
+    return Scaffold(
+      appBar: AppBar(title: Text('Profile')),
+      body: Column(children: [
+        ListTile(title: Text('XXX'), subtitle: Text('Nama'),),
+        ListTile(title: Text('XXX'), subtitle: Text('Email'),)
+      ]),
+    );
   }
 }

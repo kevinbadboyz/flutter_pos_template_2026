@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pos_template_2026/ui/menu/pages/order_history_page.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../menu/dashboard_page.dart';
-import '../menu/menu_resto_page.dart';
-import '../menu/profile_page.dart';
-import '../menu/table_resto_page.dart';
+import '../menu/pages/dashboard_page.dart';
+import '../menu/pages/menu_resto_page.dart';
+import '../menu/pages/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> list = [
     DashboardPage(),
     MenuRestoPage(),
-    TableRestoPage(),
+    OrderHistoryPage(),
     ProfilePage()
   ];
 

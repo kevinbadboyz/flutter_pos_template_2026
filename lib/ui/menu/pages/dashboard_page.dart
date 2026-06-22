@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pos_template_2026/pages/login_page.dart';
+import 'package:flutter_pos_template_2026/ui/auth/pages/login_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});

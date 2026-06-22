@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pos_template_2026/data/models/table_resto_model.dart';
-import 'package:flutter_pos_template_2026/pages/table_resto_form.dart';
+import 'package:flutter_pos_template_2026/ui/menu/pages/table_resto_form.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TableRestoPage extends StatefulWidget {

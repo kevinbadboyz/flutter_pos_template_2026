@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pos_template_2026/data/param/table_resto_param.dart';
 
 class TableRestoForm extends StatefulWidget {
   const TableRestoForm({super.key});
@@ -128,13 +127,6 @@ class _TableRestoFormState extends State<TableRestoForm> {
                     ),
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
-                        final tableRestoParam = TableRestoParam(
-                          tecCode.text,
-                          tecName.text,
-                          int.parse(tecCapacity.text.toString()),
-                          null,
-                          null,
-                        );
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text('Data berhasil disimpan...')),
                         );

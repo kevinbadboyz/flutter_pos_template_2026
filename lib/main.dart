@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pos_template_2026/home_page/home_page.dart';
-import 'package:flutter_pos_template_2026/menu/table_resto_page.dart';
+import 'package:flutter_pos_template_2026/ui/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
